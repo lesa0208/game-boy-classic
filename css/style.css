@@ -1,0 +1,358 @@
+@font-face {
+    font-family: 'Pretendo';
+    src:url('../fonts/Pretendo.ttf.woff') format('woff'),
+    url('../fonts/Pretendo.ttf.svg#Pretendo') format('svg'),
+    url('../fonts/Pretendo.ttf.eot'),
+    url('../fonts/Pretendo.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: darkseagreen;
+    text-align:  center;
+    font-family: sans-serif;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.console {
+    background-color: #e5e6e6;
+    border-radius: 15px 15px 50px 15px;
+    box-shadow: -5px 6px 20px rgba(0, 0, 0, 0.37), 0 10px 30px rgba(0, 0, 0, 0.46);
+    display: inline-block;
+    position: relative;
+    width: 420px;
+}
+.console:after,
+.console:before {
+    background-color: #d9d9d9;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 31px;
+    width: 4px;
+    top: 0;
+}
+.console:after {
+    left: 40px;
+}
+.console:before {
+    right: 40px;
+}
+.on-off {
+    border-bottom: 4px solid #d9d9d9;
+    text-align: left;
+}
+.on-off span {
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    box-shadow: inset 0 12px 22px rgba(0, 0, 0, 0.12);
+    color: #cccccc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 8px;
+    margin: 0 0 10px 80px;
+    padding: 5px 8px;
+    text-transform: uppercase;
+}
+.screen-outer {
+    border-radius: 10px 10px 50px 10px;
+    background-color: #777777;
+    background-image: linear-gradient(46deg, rgba(72, 80, 85, 0), rgba(143, 151, 156, 0.58) 80%);
+    box-sizing: border-box;
+    border-top: 1px solid #444444;
+    border-right: 1px solid #444444;
+    border-bottom: 1px solid #444444;
+    border-left: 2px solid #595959;
+    display: inline-block;
+    margin-top: 25px;
+    position: relative;
+    text-align: center;
+    height: 270px;
+    width: 324px;
+}
+.screen-outer .power {
+    color: #b3b3b3;
+    font-size: 8px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 90px;
+    left: 6px;
+}
+.power-off {
+    background-color: #b98181;
+    border-radius: 100%;
+    display: block;
+    margin: 10px auto;
+    height: 10px;
+    width: 10px;
+}
+.screen-title {
+    color: #b3b3b3;
+    display: inline-block;
+    font-size: 10px;
+    font-family: sans-serif;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+.screen-title:before, .screen-title:after {
+    background-color: #910E42;
+    box-shadow: 0 6px 0 #283593;
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 75px;
+    margin-top: 2px;
+    height: 3px;
+}
+.screen-title:after {
+    width: 38px;
+}
+.screen-inner {
+    box-shadow: inset -2px 2px 10px #3b5b24;
+    background-color: #C4DD55;
+    display: inline-block;
+    overflow: hidden;
+    height: 205px;
+    width: 225px;
+}
+.screen-inner-logo {
+    font-size: 17px;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.2);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    visibility: hidden;
+}
+.screen-inner-logo p {
+    display: inline-block;
+    font-family: 'Pretendo';
+}
+.screen-inner-logo span {
+    font-size: 12px;
+}
+.inner-logo-end {
+    top: 110px;
+    -webkit-transition: top 0.8s linear, opacity 0.8s linear;
+    -moz-transition: top 0.8s linear, opacity 0.8s linear;
+    -ms-transition: top 0.8s linear, opacity 0.8s linear;
+    -o-transition: top 0.8s linear, opacity 0.8s linear;
+    transition: top 0.8s linear, opacity 0.8s linear;
+    opacity: 1;
+    visibility: visible;
+}
+.console-title {
+    color: #3B419D;
+    font-size: 14px;
+    margin: 10px 0 10px 65px;
+    text-align: left;
+}
+.console-title span {
+    font-size: 22px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.console-title span:after {
+    content: 'tm';
+    font-size: 10px;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.console-main {
+    margin-top: 50px;
+}
+.console-main-direction {
+    display: inline-block;
+    position: relative;
+    width: 30%;
+}
+.console-main-direction-bg {
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.21), inset 0 12px 22px rgba(0, 0, 0, 0.12);
+    position: absolute;
+    top: -15px;
+    left: -45px;
+    height: 120px;
+    width: 120px;
+}
+.console-main-direction:before {
+    background-color: #353535;
+    border-radius: 100%;
+    box-shadow: inset 0 0 5px #262626;
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    z-index: 6;
+}
+.console-main-direction .btn-vertical,
+.console-main-direction .btn-horizontal {
+    background: #444;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30px;
+    height: 90px;
+    z-index: 5;
+}
+.console-main-direction .btn-horizontal {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+.console-main-direction .btn-vertical:before,
+.console-main-direction .btn-vertical:after,
+.console-main-direction .btn-horizontal:before,
+.console-main-direction .btn-horizontal:after {
+    left: 8px;
+}
+.console-main-direction .btn-vertical:before,
+.console-main-direction .btn-horizontal:before {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #cccccc;
+    content: '';
+    position: absolute;
+    top: -10px;
+}
+.console-main-direction .btn-vertical:after,
+.console-main-direction .btn-horizontal:after {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #cccccc;
+    content: '';
+    position: absolute;
+    bottom: -10px;
+}
+.console-main-action-buttons {
+    background-color: #dfdfdf;
+    border-radius: 30px;
+    display: inline-block;
+    transform: rotate(-25deg);
+    height: 60px;
+    width: 130px;
+}
+.console-main-action {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    right: -35px;
+}
+.console-main-action-buttons {
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.21), inset 0 12px 22px rgba(0, 0, 0, 0.12);
+}
+.console-main-action-buttons .btn-b,
+.console-main-action-buttons .btn-a {
+    background: #a93671;
+    border-radius: 100%;
+    box-shadow: inset 1px 1px 2px #A87493, -1px -1px 2px #000000, 1px 2px 11px rgba(125, 136, 134, 0.79);
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Electrolize', sans-serif;;
+    margin-top: 8px;
+    height: 44px;
+    width: 44px;
+}
+.console-main-action-buttons .btn-a {
+    margin-left: 18px;
+}
+
+.console-main-action-buttons .btn-a:after,
+.console-main-action-buttons .btn-b:after {
+    color: #3B419D;
+    position: absolute;
+    top: 65px;
+    text-transform: uppercase;
+}
+.console-main-action-buttons .btn-a:after {
+    content: 'a';
+    right: 25px;
+
+}
+.console-main-action-buttons .btn-b:after {
+    content: 'b';
+    left: 27px;
+}
+.console-main .start-select {
+    margin-top: 30px;
+    transform: rotate(-25deg);
+}
+.start-select .btn-start,
+.start-select .btn-select {
+    background-image: linear-gradient(269deg, #6F7875, #9B9B9B 71%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(226, 226, 226, 0.97), 1px -1px 2px #767A79, inset 0 1px 1px #A3ACA9;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    height: 12px;
+    width: 50px;
+}
+.start-select .btn-select {
+    margin-right: 15px;
+    position: relative;
+    left: 10px;
+    top: -25px;
+}
+.start-select .btn-start:after,
+.start-select .btn-select:after {
+    color: #3B419D;
+    font-size: 10px;
+    font-family: 'Electrolize', sans-serif;
+    position: absolute;
+    left: 11px;
+    top: 20px;
+    text-transform: uppercase;
+}
+.start-select .btn-start:after {
+    content: 'start';
+}
+.start-select .btn-select:after {
+    content: 'select';
+    left: 8px;
+}
+
+.console-main-speakers {
+    margin-top: 20px;
+    text-align: right;
+    transform: rotate(-25deg);
+    position: relative;
+    left: -15px;
+    top: 30px;
+}
+.console-main-speakers .speaker {
+    background: #dddddd;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7), inset 2px 1px 3px #444444, inset 1px -1px black;
+    display: inline-block;
+    margin-right: 8px;
+    height: 70px;
+    width: 8px;
+}
+.console-main-phones {
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    box-shadow: inset 0 9px 8px rgba(0, 0, 0, 0.12);
+    color: #cccccc;
+    display: inline-block;
+    font-size: 8px;
+    margin-bottom: 5px;
+    padding: 5px 8px;
+    text-transform: uppercase;
+}
+.power-on {
+    background-color: #f00;
+    box-shadow: 0 0 7px 3px #ef5350;
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
