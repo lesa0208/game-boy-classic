@@ -1,2 +1,2 @@
 # game-boy-classic
-Game boy template done with css 
+Game boy template done with pure CSS 
