@@ -1,6 +1,12 @@
-$(document).ready(function() {
-   $('.on-off span').on('click', function() {
-      $('.power-off').toggleClass('power-on');
-      $('.screen-inner-logo').toggleClass('inner-logo-end');
-   });
+const onOfSpan = document.querySelector('.on-off span');
+
+const powerButton = document.querySelector('.power-off');
+const innerLogo = document.querySelector('.screen-inner-logo');
+const playSound = document.getElementById('power-sound');
+onOfSpan.addEventListener('click', () => {
+    powerButton.classList.toggle('power-on');
+    if (powerButton.classList.contains('power-on')) {
+        setTimeout(() => playSound.play(), 800);
+    }
+    innerLogo.classList.toggle('inner-logo-end');
 });
