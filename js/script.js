@@ -6,7 +6,7 @@ const playSound = document.getElementById('power-sound');
 onOfSpan.addEventListener('click', () => {
     powerButton.classList.toggle('power-on');
     if (powerButton.classList.contains('power-on')) {
-        playSound.play();
+        setTimeout(() => playSound.play(), 800);
     }
     innerLogo.classList.toggle('inner-logo-end');
 });
